@@ -40,6 +40,7 @@ class NotesController < ApplicationController
   # POST /notes
   # POST /notes.xml
   def create
+    find_prime_numbers
     @note = Note.new(params[:note])
 
     respond_to do |format|
@@ -78,6 +79,25 @@ class NotesController < ApplicationController
     respond_to do |format|
       format.html { redirect_to(notes_url) }
       format.xml  { head :ok }
+    end
+  end
+  
+  private
+  
+  def find_prime_numbers
+    state = Numeric.new
+    print "2,3"
+    (4..50000).each do
+      |i|
+      (2..(Math.sqrt(i).ceil)).each do
+        |thing|
+        state = 1
+        if (i.divmod(thing)[1] == 0)
+          state = 0
+          break
+        end
+      end
+      print "#{i}\," unless(state == 0)
     end
   end
 end

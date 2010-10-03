@@ -1,9 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link href='http://fonts.googleapis.com/css?family=Reenie+Beanie&subset=latin' rel='stylesheet' type='text/css'>
-  <title>CoStickies</title>
+  <title>CO Stickies</title>
   <%= stylesheet_link_tag :all %>
+  <link href='http://fonts.googleapis.com/css?family=Reenie+Beanie' rel='stylesheet' type='text/css'>
+
+
+  <%= javascript_include_tag 'http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js', 
+                             'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.4/jquery-ui.min.js',
+                             'http://js.pusherapp.com/1.6/pusher.min.js' %>
+  
+  <script type="text/javascript">
+    var pusher_key = "<%= Pusher.key %>";
+    var pusher_channel = "co-stickies-<%= Rails.env %>";
+  </script>
+
+
+
   <%= javascript_include_tag :defaults %>
   <%= csrf_meta_tag %>
 </head>

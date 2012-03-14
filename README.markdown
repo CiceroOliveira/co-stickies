@@ -4,4 +4,4 @@ This application was created for testing purposes following instructions from [H
 
 The main purpose of this application is to show how to make use of cloud services.
 
-For more info check out [this post](http://cicerooliveira.com/2010/10/03/rails-in-the-cloud/) on my blog.
+For more info check out [this post](http://cicerooliveira.com/blog/2010/10/03/rails-in-the-cloud/) on my blog.
